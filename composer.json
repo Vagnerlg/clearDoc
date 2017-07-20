@@ -1,7 +1,6 @@
 {
     "name": "vagnerlg/cleardoc",
     "description": "Simple gererate documentation without anotation code",
-    "version": "1.0.0",
     "license": "MIT",
     "keywords": ["PHPDocumentor", "PHPDOC", "Doc"],
     "authors": [{
