@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+        {% if meta.description %}
+            <meta name="description" content="{{ meta.description|striptags }}">
+        {% endif %}{% if meta.robots %}
+            <meta name="robots" content="{{ meta.robots }}">
+        {% endif %}
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!--link rel="stylesheet" href="{{ theme_url }}/style.css" type="text/css" />
+        <link rel="stylesheet" href="{{ theme_url }}/fontello.css" type="text/css" /-->
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h1><a href="{{ "index"|link }}" id="logo">{{ site_title }}</a></h1>
+                    <nav>
+                        <div class="list-group">
+                            {% set cont = 0 %}
+                            {% for page in pages if page.title %}
+                                {% for i in cont %}
+                                    s
+                                {% endfor %}
+                                <a class="list-group-item {% if page.id == current_page.id %}active{% endif %}" href="{{ page.url }}">{{ page.title }}</a>
+                                {% if page.type == 'dir' %}{% set cont = cont + 1 %} {% endif %}
+                            {% endfor %}
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-8">
+                    <section id="content">
+                        <div class="inner">
+                            {{ content }}
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <footer id="footer">
+                <div class="inner">
+                    <div class="social">
+                        {% for social in meta.social %}
+                            <a href="{{ social.url }}" title="{{ social.title }}"><span class="icon-{{ social.icon }}"></span></a>
+                        {% endfor %}
+                    </div>
+                    <a href="http://picocms.org/">Pico</a> was made by <a href="http://gilbert.pellegrom.me">Gilbert Pellegrom</a>
+                    and is maintained by <a href="https://github.com/picocms/Pico/graphs/contributors">The Pico Community</a>.
+                    Released under the <a href="https://github.com/picocms/Pico/blob/master/LICENSE.md">MIT license</a>.
+                </div>
+            </footer>
+        </div>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>

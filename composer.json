@@ -1,0 +1,21 @@
+{
+    "name": "vagner/cleardoc",
+    "description": "Simple gererate documentation without anotation code",
+    "version": "0.0.1-alpha",
+    "license": "MIT",
+    "keywords": ["PHPDocumentor", "PHPDOC", "Doc"],
+    "authors": [{
+        "name": "Vagner Gonçalves",
+        "email": "vlgonalves@gmail.com",
+        "homepage": "http://www.naderman.de",
+        "role": "Developer"
+    }],
+    "autoload": {
+        "psr-4": {
+            "ClearDoc\\": "src/"
+        }
+    },
+    "require": {
+        "picocms/pico": "^1.0"
+    }
+}
