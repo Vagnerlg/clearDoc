@@ -1,5 +1,5 @@
 {
-    "name": "vagner/cleardoc",
+    "name": "vagnerlg/cleardoc",
     "description": "Simple gererate documentation without anotation code",
     "version": "0.0.1-alpha",
     "license": "MIT",
@@ -10,11 +10,7 @@
         "homepage": "http://www.naderman.de",
         "role": "Developer"
     }],
-    "autoload": {
-        "psr-4": {
-            "ClearDoc\\": "src/"
-        }
-    },
+    "bin": ["bin/clearDoc"],
     "require": {
         "picocms/pico": "^1.0"
     }
