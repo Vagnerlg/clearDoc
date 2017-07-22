@@ -2,7 +2,6 @@
     "name": "vagnerlg/cleardoc",
     "description": "Simple gererate documentation without anotation code",
     "license": "MIT",
-    "type": "project",
     "keywords": ["PHPDocumentor", "PHPDOC", "Doc"],
     "authors": [{
         "name": "Vagner Gonçalves",
@@ -10,11 +9,6 @@
         "role": "Developer"
     }],
     "bin": ["bin/clearDoc"],
-    "scripts": {
-        "post-install-cmd": [
-            "./vendor/bin/clearDoc init"
-        ]
-    },
     "autoload": {
         "psr-4": {
             "ClearDoc\\": "bin/"

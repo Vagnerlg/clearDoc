@@ -1,3 +1,5 @@
 #!/usr/bin/php
-<?php 
-var_dump($argv);
+<?php
+if($argv[1] == 'init'){
+    echo __dir__;
+}
