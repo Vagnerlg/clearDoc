@@ -11,7 +11,7 @@
     }],
     "bin": ["bin/clearDoc"],
     "scripts": {
-        "post-install-cmd": "ClearDoc\\Init::init"
+        "post-install-cmd": ["ClearDoc\\Init::init"]
     },
     "autoload": {
         "psr-4": {
