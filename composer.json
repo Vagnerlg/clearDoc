@@ -2,14 +2,18 @@
     "name": "vagnerlg/cleardoc",
     "description": "Simple gererate documentation without anotation code",
     "license": "MIT",
+    "type": "project",
     "keywords": ["PHPDocumentor", "PHPDOC", "Doc"],
     "authors": [{
         "name": "Vagner Gonçalves",
         "email": "vlgonalves@gmail.com",
-        "homepage": "http://www.naderman.de",
+        "homepage": "",
         "role": "Developer"
     }],
     "bin": ["bin/clearDoc"],
+    "scripts": {
+        "post-install-cmd": "vagnerlg\\cleardoc\\postinstall.php"
+    },
     "require": {
         "picocms/pico": "^1.0"
     }
