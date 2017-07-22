@@ -1,2 +1,9 @@
 #!/bin/bash
-php ../vagnerlg/cleardoc/bin/index.php $@
+if [ -e ./vendor/vagnerlg/cleardoc/bin/index.php ] ; then
+	php ./vendor/vagnerlg/cleardoc/bin/index.php $@
+else if [ -e ../vendor/vagnerlg/cleardoc/bin/index.php ] ; then
+	php ../vendor/vagnerlg/cleardoc/bin/index.php $@
+else 
+	php ../../vendor/vagnerlg/cleardoc/bin/index.php $@
+fi
+fi
