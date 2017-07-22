@@ -7,12 +7,16 @@
     "authors": [{
         "name": "Vagner Gonçalves",
         "email": "vlgonalves@gmail.com",
-        "homepage": "",
         "role": "Developer"
     }],
     "bin": ["bin/clearDoc"],
     "scripts": {
-        "post-install-cmd": "vagnerlg\\cleardoc\\postinstall.php"
+        "post-install-cmd": "ClearDoc\\Init::init"
+    },
+    "autoload": {
+        "psr-4": {
+            "ClearDoc\\": "bin/"
+        }
     },
     "require": {
         "picocms/pico": "^1.0"
