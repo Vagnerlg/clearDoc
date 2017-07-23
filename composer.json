@@ -2,6 +2,7 @@
     "name": "vagnerlg/cleardoc",
     "description": "Simple gererate documentation without anotation code",
     "license": "MIT",
+    "type": "project",
     "keywords": ["PHPDocumentor", "PHPDOC", "Doc"],
     "authors": [{
         "name": "Vagner Gonçalves",
@@ -11,7 +12,7 @@
     "bin": ["bin/clearDoc"],
     "autoload": {
         "psr-4": {
-            "ClearDoc\\": "bin/"
+            "ClearDoc\\": ".bin/"
         }
     },
     "require": {
